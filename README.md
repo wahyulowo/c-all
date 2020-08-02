@@ -30,9 +30,10 @@ $ cd c-all
 $ python2 c-all.py
 ```
 ## Informasi For Updates Script
-* Cloning Indonesia ( Reprair )
-* Cloning Iran ( Reprair )
+* Cloning Indonesia ( Reprair / Error)
+* Cloning Iran ( Reprair / Error )
 * Done Updated List Password
 * Done Fix Errors Installed
+* Done Updateds News Template Menu
 
 Thanks For Using My Script
