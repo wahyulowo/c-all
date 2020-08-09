@@ -13,6 +13,9 @@
 * Cloning India
 * Cloning Pakistan
 * Cloning Bangladesh
+* Cloning Indonesia
+* Cloning Iran
+
 
 ## Install script on Termux
 ```
@@ -34,6 +37,7 @@ $ python2 c-all.py
 * Done Updated List Password
 * Done Fix Errors Installed
 * Done Updateds News Template Menu
+* Done Updateds News Country
 
 Notice Me : Please Don't Change Name Author
 Thanks For Using My Script
